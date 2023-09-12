@@ -18,7 +18,7 @@ export class PhotosService {
     });
 
     if (photo.webPath) {
-      this.photos.unshift()
+      this.photos.unshift(photo.webPath);
     }
   }
 }
