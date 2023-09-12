@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
+import { PhotosService } from './services/photos.service';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +10,14 @@ import { IonicModule } from '@ionic/angular';
   imports: [IonicModule],
 })
 export class AppComponent {
-  constructor() {}
+
+  photos: string[] = [];
+
+  constructor(private photosService: PhotosService) {
+    this.photosService.photos;
+  }
+
+  async takePhoto() {
+    await this.photosService.addNewFoto();
+  }
 }
