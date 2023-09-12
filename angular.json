@@ -131,12 +131,18 @@
           "options": {
             "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
   },
   "cli": {
-    "schematicCollections": ["@ionic/angular-toolkit"]
+    "schematicCollections": [
+      "@ionic/angular-toolkit"
+    ],
+    "analytics": "03ed5c7b-f34c-465b-971d-1ab9c49b1b34"
   },
   "schematics": {
     "@ionic/angular-toolkit:component": {
